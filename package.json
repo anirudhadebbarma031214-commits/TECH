@@ -1,1 +1,39 @@
-{"name":"nxt-browser","version":"1.0.0","description":"NXT Browser by ANI STUDIO","main":"src/main.js","author":"ANI STUDIO","license":"MIT","scripts":{"start":"electron .","dist":"electron-builder --win nsis"},"devDependencies":{"electron":"^35.1.5","electron-builder":"^26.0.12"},"build":{"appId":"com.anistudio.nxtbrowser","productName":"NXT Browser","directories":{"output":"release"},"files":["src/**/*","package.json"],"win":{"target":["nsis"],"artifactName":"NXT-Browser-Setup-${version}.${ext}"},"nsis":{"oneClick":false,"allowToChangeInstallationDirectory":true,"createDesktopShortcut":true,"createStartMenuShortcut":true}}}
+{
+  "name": "nxt-browser",
+  "version": "1.0.0",
+  "description": "NXT Browser by ANI STUDIO",
+  "main": "src/main.js",
+  "author": "ANI STUDIO",
+  "license": "MIT",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder --win nsis --publish never"
+  },
+  "devDependencies": {
+    "electron": "^35.1.5",
+    "electron-builder": "^26.0.12"
+  },
+  "build": {
+    "appId": "com.anistudio.nxtbrowser",
+    "productName": "NXT Browser",
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "src/**/*",
+      "package.json"
+    ],
+    "win": {
+      "target": [
+        "nsis"
+      ],
+      "artifactName": "NXT-Browser-Setup-${version}.${ext}"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true
+    }
+  }
+}
